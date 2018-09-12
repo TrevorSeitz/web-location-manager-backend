@@ -1,6 +1,6 @@
 class LocationsController < ApplicationController
   def index
-    places = Location.search(search_params.to_h.symbolize_keys)
+    locations = Location.search(search_params.to_h.symbolize_keys)
     render json: locations
   end
  
