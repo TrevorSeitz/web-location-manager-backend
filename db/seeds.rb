@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-center_point = { lat: 43.156338, lng: 282.385696 }
+center_point = { lat: 43.156338, lng: -77.385696 }
  
 1.upto(100) do |i|
   Location.create!(
