@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2018_09_11_204607) do
 
-  create_table "locations", force: :cascade do |t|
+  create_table "places", force: :cascade do |t|
     t.decimal "longitude"
     t.decimal "latitude"
     t.text "description"
