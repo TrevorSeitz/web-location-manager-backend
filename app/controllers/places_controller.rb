@@ -4,7 +4,19 @@ class PlacesController < ApplicationController
     render json: places
   end
 
+  def create
+
+  byebug
+    @place = Place.new(place_params)
+    @place.save
+  end
+
+
   private
+
+  def place_params
+    params.permit(:name, :venue, :longitude, :latitude, :contactName, :contactPhone, :email, :description, :fileName, :GPSLatitudeRef, :GPSLongitudeRef)
+  end
 
   def search_params
     params.permit(:min_lng, :max_lng, :min_lat, :max_lat)

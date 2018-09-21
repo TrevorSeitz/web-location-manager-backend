@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-center_point = { lat: 50.0515918, lng: 19.9357531 }
+center_point = { lat: 43.156338, lng: -77.614304 }
 
 1.upto(100) do |i|
   Place.create!(
@@ -13,6 +13,5 @@ center_point = { lat: 50.0515918, lng: 19.9357531 }
     description: Faker::Lorem.paragraph(8),
     longitude: center_point[:lng] + rand(-10.00..10.00),
     latitude: center_point[:lat] + rand(-10.00..10.00),
-
   )
 end
