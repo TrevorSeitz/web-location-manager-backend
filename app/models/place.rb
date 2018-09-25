@@ -1,5 +1,5 @@
 class Place < ApplicationRecord
-  # has_one_attached :main_picture # one-to-one relationship
+  has_one_attached :image # one-to-one relationship
   # has_many_attached :photos # one-to-many relationship
 
   scope :by_longitude, -> (min, max) { min && max ? where('longitude >= :min AND longitude <= :max', min: min, max: max) : all }

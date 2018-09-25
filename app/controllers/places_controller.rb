@@ -5,17 +5,20 @@ class PlacesController < ApplicationController
   end
 
   def create
+    @place = Place.create(place_params)
 
-  byebug
-    @place = Place.new(place_params)
+byebug
+    @place.image.attach(params[:image])
     @place.save
+
+# @place.image.attach(io: File.open(params[:image]), filename: params[:fileName], content_type: 'image/jpeg', identify: false)
   end
 
 
   private
 
   def place_params
-    params.permit(:name, :venue, :longitude, :latitude, :contactName, :contactPhone, :email, :description, :fileName, :GPSLatitudeRef, :GPSLongitudeRef)
+    params.require(:place).permit(:name, :fileName, :venue, :longitude, :latitude, :contactName, :contactPhone, :email, :permit, :description, :GPSLatitudeRef, :GPSLongitudeRef, :image)
   end
 
   def search_params

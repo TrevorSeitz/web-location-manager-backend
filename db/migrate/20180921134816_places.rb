@@ -9,6 +9,7 @@ class Places < ActiveRecord::Migration[5.2]
       t.string :contactPhone
       t.string :email
       t.text :description
+      t.boolean :permit
       t.string :fileName
       t.string :GPSLatitudeRef
       t.string :GPSLongitudeRef
