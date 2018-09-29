@@ -1,5 +1,6 @@
 class PlacesController < ApplicationController
   def index
+    # byebug
     places = Place.search(search_params.to_h.symbolize_keys)
     render json: places
   end
@@ -7,7 +8,7 @@ class PlacesController < ApplicationController
   def create
     @place = Place.create(place_params)
 
-byebug
+# byebug
     @place.image.attach(params[:image])
     @place.save
 

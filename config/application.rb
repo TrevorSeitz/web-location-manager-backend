@@ -39,7 +39,8 @@ module LocationManagerBackend
         resource(
           '*',
           headers: :any,
-          methods: [:get, :post, :patch, :put, :delete, :options]
+          # methods: [:get, :post, :patch, :put, :delete, :options]
+          methods: %I[get post options delete patch puts]
         )
       end
     end

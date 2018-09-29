@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_24_150757) do
+ActiveRecord::Schema.define(version: 2018_09_29_154034) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -33,6 +33,11 @@ ActiveRecord::Schema.define(version: 2018_09_24_150757) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "images", force: :cascade do |t|
+    t.string "name"
+    t.integer "place_id"
+  end
+
   create_table "places", force: :cascade do |t|
     t.string "name"
     t.decimal "longitude"
@@ -46,6 +51,10 @@ ActiveRecord::Schema.define(version: 2018_09_24_150757) do
     t.string "fileName"
     t.string "GPSLatitudeRef"
     t.string "GPSLongitudeRef"
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.bigint "image_file_size"
+    t.datetime "image_updated_at"
   end
 
 end

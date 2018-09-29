@@ -1,7 +1,7 @@
-class PhotosController < ApplicationController
+class ImagesController < ApplicationController
 
   def create
-    @photo = Photo.new()
+    @image = Image.new()
     # console.log('hello')
     byebug
   end
