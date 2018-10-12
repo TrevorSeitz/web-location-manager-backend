@@ -16,18 +16,19 @@ local:
 #   bucket: your_own_bucket
 
 # Remember not to checkin your GCS keyfile to a repository
-# google:
-#   service: GCS
-#   project: your_project
-#   credentials: <%= Rails.root.join("path/to/gcs.keyfile") %>
-#   bucket: your_own_bucket
+google:
+  service: GCS
+  project: school-final-pro-1536601921896
+  # credentials: <%= Rails.root.join("config/gcs.json") %>
+  credentials: <%= Rails.root.join("config/school-final-pro-1536601921896-a5d7159cb944.json") %>
+  bucket: school-final-pro-1536601921896.appspot.com
 
 # Use rails credentials:edit to set the Azure Storage secret (as azure_storage:storage_access_key)
 # microsoft:
 #   service: AzureStorage
-#   storage_account_name: your_account_name
-#   storage_access_key: <%= Rails.application.credentials.dig(:azure_storage, :storage_access_key) %>
-#   container: your_container_name
+#   storage_account_name: flatironfinal
+#   storage_access_key: <%= Rails.application.credentials.dig(:azure_storage, :7wEsnK9Dd5MppgvbBjcF+mibO7XOyNcckK8oLbwaamuJAgYgtEiWAa9TEu4aWRHfhoOah1t1L9x3RKZ7xtU2pw==) %>
+#   container: locationmanager
 
 # mirror:
 #   service: Mirror

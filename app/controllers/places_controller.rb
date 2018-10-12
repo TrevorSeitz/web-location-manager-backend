@@ -11,8 +11,11 @@ class PlacesController < ApplicationController
 
   def create
     @place = Place.create(place_params)
-    @place.image.attach(params[:image])
+    # @otherplace = Place.create(params)
+    # @place.image.attach(params[:image])
     @place.save
+    # debugger
+    # render json: @place
   end
 
   def edit
@@ -26,16 +29,16 @@ class PlacesController < ApplicationController
   end
 
   def update
-    debugger
+    # debugger
     @place = Place.find(place_params[:id])
-    @place.update(name: place_params[:name], venue: place_params[:venue], contactName: place_params[:contactName], contactPhone: place_params[:contactPhone], email: place_params[:email], description: place_params[:description])
+    @place.update(name: place_params[:name], venue: place_params[:venue], contactName: place_params[:contactName], contactPhone: place_params[:contactPhone], email: place_params[:email], description: place_params[:description], likes: place_params[:likes])
   end
 
 
   private
 
   def place_params
-    params.require(:place).permit(:id, :name, :fileName, :venue, :longitude, :latitude, :contactName, :contactPhone, :email, :permit, :description, :GPSLatitudeRef, :GPSLongitudeRef, :image)
+    params.require(:place).permit(:id, :name, :fileName, :venue, :longitude, :latitude, :contactName, :contactPhone, :email, :permit, :description, :GPSLatitudeRef, :GPSLongitudeRef, :likes, :image)
   end
 
   def search_params
