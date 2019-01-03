@@ -17,6 +17,7 @@ gem 'paperclip'
 gem 'mini_exiftool'
 gem 'azure', '~> 0.7.1'
 gem 'google-cloud-storage'
+gem 'devise'
 # gem 'active_model_serializers'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
